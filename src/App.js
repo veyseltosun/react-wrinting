@@ -2,9 +2,9 @@ import React from 'react'
 
 function App() {
 
-  const timeGetHandler = () => new Date().toLocaleTimeString();
+  const timeHandler = () => new Date().toLocaleTimeString();
   React.useEffect(() => {
-   setInterval(timeGetHandler, 1000)
+   setInterval(timeHandler, 1000)
   }, [])
   
   
@@ -18,7 +18,7 @@ function App() {
           This is a react coding practising Iplimantation!
         </h3>
       </header>
-      <h2>It is {timeGetHandler}  ...</h2>
+      <h2>It is {timeHandler}  ...</h2>
 
 
 
