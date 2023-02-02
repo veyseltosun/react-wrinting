@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 function App() {
-
+  const[timer, setTimer] = useState("");
 
    function clockShow() {
     let date = new Date();
     let hour = date.getHours();
     let minute = date.getMinutes();
     let seconds = date.getSeconds();
-    console.log(hour+ ":"+minute+":"+seconds);
-    const time = (hour+ ":"+minute+":"+seconds);
+    
+    setTimer(hour+ ":"+minute+":"+seconds);
   }
+  let mayInterval = setTimeout(clockShow, 1000)
+ 
 
   
   
@@ -23,7 +25,7 @@ function App() {
           This is a react coding practising Iplimantation!
         </h3>
       </header>
-      <h2>It is {time}  ...</h2>
+      <h2>It is {timer}  </h2>
       
 
 
@@ -35,7 +37,7 @@ function App() {
   )
 }
 
-setInterval(clockShow, 1000)
+
 
 
 export default App
