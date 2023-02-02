@@ -11,7 +11,6 @@ function App() {
     const time = (hour+ ":"+minute+":"+seconds);
   }
 
-   setInterval(clockShow, 1000)
   
   
   
@@ -36,6 +35,7 @@ function App() {
   )
 }
 
+setInterval(clockShow, 1000)
 
 
 export default App
