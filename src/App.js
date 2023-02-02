@@ -1,9 +1,17 @@
 import React from 'react'
 function App() {
-  
-    setInterval(App, 1000)
- 
-  
+
+
+   function clockShow() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let seconds = date.getSeconds();
+    console.log(hour+ ":"+minute+":"+seconds);
+    const time = (hour+ ":"+minute+":"+seconds);
+  }
+
+   setInterval(clockShow, 1000)
   
   
   
@@ -16,7 +24,8 @@ function App() {
           This is a react coding practising Iplimantation!
         </h3>
       </header>
-      <h2>It is {new Date().toLocaleTimeString()}  ...</h2>
+      <h2>It is {time}  ...</h2>
+      
 
 
 
