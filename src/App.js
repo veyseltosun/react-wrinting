@@ -1,38 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import NameMessage from './NameMessage';
 function App() {
-  const[timer, setTimer] = useState("");
+  const[name, setName] = useState("Veysel");
 
-   function clockShow() {
-    let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let seconds = date.getSeconds();
-    
-    setTimer(hour+ ":"+minute+":"+seconds);
-  }
-  let mayInterval = setTimeout(clockShow, 1000)
- 
-
-  
+   
+  useEffect(() => {
+    console.log("useEffect run.")
+  },[name])
   
   
   return (
     <div className='container'>
 
-      <header>
-        <h3 className='head'>
-
-          This is a react coding practising Iplimantation!
-        </h3>
-      </header>
-      <h2>It is {timer}  </h2>
-      
-
-
-
-
-
-
+      <h1> Merhaba {name}</h1>
+      <button onClick={() => setName("Ahmet")}>Ismi Degistir.</button>
+      <NameMessage/>
     </div>
   )
 }
