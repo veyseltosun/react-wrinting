@@ -14,7 +14,7 @@ function App() {
 
       <h1> Merhaba {name}</h1>
       <button onClick={() => setName("Ahmet")}>Ismi Degistir.</button>
-      <NameMessage/>
+     {name === "Veysel" &&  <NameMessage/> }
     </div>
   )
 }
